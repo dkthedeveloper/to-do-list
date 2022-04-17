@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200&family=Roboto+Mono:wght@500&family=Square+Peg&display=swap');
+
+body    {
+    background-color: moccasin;
+}
+
+main    {
+
+    margin-bottom: 70px;
+    background: white;
+    width: 1000px;
+    height: fit-content;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid black;
+    font-family: 'Roboto Mono', monospace;
+    
+}
+
+h1  {
+    text-align: center;
+}
+
+form    {
+    text-align: center;
+    margin-bottom: 70px;
+    background: rgb(241, 238, 238);
+    width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+input   {
+    background-color: rgb(209, 237, 250);
+}
+
+
+#tasklist   {
+    
+    list-style-image: url(./images/arrow-g722be1e34_640.png);
+    position: relative;
+    margin-left: 250px;
+    margin-right: 100px;
+    width: 400px;
+}
+
+span {
+    left: 100px;
+    
+    
+  }
+
+#listhead  {
+    text-align: center;
+    margin-bottom: 20px;
+   
+}
+
+li  {
+    padding-left: 10px;
+    color: blue;
+    font-size: 18px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    font-weight: 800;
+    
+  
+    
+}
+
+li:first-child {
+    border-top: none;
+   
+  }
+  
+  li:nth-child(even) {
+    background-color: rgb(246,246,246);
+  }
+  
+  li:hover {
+    background: rgb(215, 255, 82)
+  }
+
+  
+
+#done   {
+    position: absolute;
+    right: 0;   
+    
+
+}
