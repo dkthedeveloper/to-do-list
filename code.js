@@ -9,7 +9,7 @@ let task = ""
 let form = document.getElementById("form")
 let taskList = []
 let items = 0
-list.innerHTML = ""
+//list.innerHTML = ""
 
 
 
@@ -19,9 +19,7 @@ submitButton.addEventListener("click", handleSubmit);
 clearButton.addEventListener("click", clearForm);
 
 
-/*while (items !== null)   {
-    list.innerHTML = `<li><span>${taskList[items]}<button id="done">delete</button></span></li>`;
-}*/
+
 
 
 
@@ -36,11 +34,13 @@ function handleSubmit (event)  {
     userName = nameInput.value
     task = taskInput.value
     taskList.push(task)
-    document.getElementById("listhead").innerHTML =`<h2>${userName}'s Tasks</h2>`
-    list.innerHTML += `<li><span>${taskList[items]}<button onclick="deleteChild()" id="done">delete</button></span></li>`;
+    listHeader.innerHTML = `${userName}'s Tasks`
+    let li = document.createElement("li")
+    li.innerHTML = `${taskList[items]}<button onclick="this.parentNode.remove()" id="done">delete</button></li>`;
+    list.appendChild(li)
     //let deleteTask = document.getElementById("done")
     //deleteTask.addEventListener("click", deleteChild)
-    taskList.forEach((o, items) => o.id = items);
+    //taskList.forEach((o, items) => o.id = items);
       
     items++
     
@@ -61,6 +61,7 @@ function deleteChild (e) {
     //let item = document.getElementById(nameInput.)
     list.removeChild(list.lastElementChild)
 }
+
 
 /*
 onclick="deleteChild()"

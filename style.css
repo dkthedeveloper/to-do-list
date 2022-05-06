@@ -2,54 +2,60 @@
 
 body    {
     background-color: moccasin;
+    display: flex;
+    justify-content: center;
 }
 
 main    {
-
+    display: flex;
+    flex-direction: column;
     margin-bottom: 70px;
     background: white;
     width: 1000px;
+    flex-grow: 1;
+    flex-shrink: 1;
     height: fit-content;
-    margin: 20px auto;
+    margin: 20px 180px;
     padding: 20px;
+    padding-bottom: 40px;
     border: 1px solid black;
     font-family: 'Roboto Mono', monospace;
+    box-shadow: 18px 8px 10px rgb(142, 142, 142);
     
 }
 
-h1  {
-    text-align: center;
-}
 
 form    {
-    text-align: center;
+    flex-grow: 2;
     margin-bottom: 70px;
     background: rgb(241, 238, 238);
     width: 600px;
     margin: 20px auto;
     padding: 20px;
-    border: 1px solid black;
+    border: 1px solid rgb(67, 67, 67);
+    box-shadow: 20px 8px 10px rgb(202, 199, 199);
 }
 
+
+
+h1  {
+    display: block;
+    text-align: center;
+}
 input   {
     background-color: rgb(209, 237, 250);
 }
 
 
 #tasklist   {
-    
+    align-items: center;
     list-style-image: url(./images/arrow-g722be1e34_640.png);
     position: relative;
-    margin-left: 250px;
-    margin-right: 100px;
+    margin:auto;
     width: 400px;
 }
 
-span {
-    left: 100px;
-    
-    
-  }
+
 
 #listhead  {
     text-align: center;
@@ -59,7 +65,7 @@ span {
 
 li  {
     padding-left: 10px;
-    color: blue;
+    color: rgb(39, 88, 238);
     font-size: 18px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -80,7 +86,10 @@ li:first-child {
   }
   
   li:hover {
-    background: rgb(215, 255, 82)
+    background: rgb(215, 255, 82);
+    /*box-shadow: 10px 8px 10px rgb(117, 143, 102);*/
+    font-size: 22px;
+    text-shadow: 4px 10px 10px rgb(45, 120, 145);
   }
 
   
