@@ -1,31 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-RKEDVB0W51"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-RKEDVB0W51");
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List</title>
 
     <link href="style.css" rel="stylesheet" media="all" />
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <form id="form">
-            <div id="form-heading"><h1>To-Do List</h1></div>
-            
-            <input type="text" id="name" name="name" placeholder="Name" size="20">
-            <input type="text" id="task" name="task" placeholder="Add an item!" size ="40"> 
-            <button id="submit">Submit</button>
-            <button id="clear">Reset</button>
-        </form>
-        <h2 id="listhead"></h2>
-        <ul id="tasklist">
-            
-        </ul>
+      <form id="form">
+        <div id="form-heading"><h1>To-Do List</h1></div>
 
-        
+        <input type="text" id="name" name="name" placeholder="Name" size="20" />
+        <input
+          type="text"
+          id="task"
+          name="task"
+          placeholder="Add an item!"
+          size="40"
+        />
+        <button id="submit">Submit</button>
+        <button id="clear">Reset</button>
+      </form>
+      <h2 id="listhead"></h2>
+      <ul id="tasklist"></ul>
     </main>
-    
+
     <script src="./code.js"></script>
-</body>
+  </body>
 </html>
