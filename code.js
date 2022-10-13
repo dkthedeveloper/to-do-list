@@ -29,7 +29,10 @@ function handleSubmit (event)  {
     if (taskInput.value === "" || nameInput.value === "") {
         alert('This cannot be empty')
         return false;
-    }
+     }  else if (taskInput.value.length > 10) {
+        alert('Please limit task to 10 characters');
+        return false
+     }
     else    {
     userName = nameInput.value
     task = taskInput.value

@@ -153,7 +153,7 @@ li:first-child {
 }
 
 #done:hover {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-shadow: 4px 10px 10px rgb(45, 120, 145);
 }
 
@@ -203,7 +203,19 @@ li:first-child {
     }
 
     li {
+        font-size: .8rem;
+    }
+
+    li:hover {
         font-size: .9rem;
+    }
+
+    #done {
+        font-size: .7rem;
+    }
+    
+    #done:hover {
+        font-size: .8rem;
     }
     
 }
