@@ -36,7 +36,7 @@ function handleSubmit (event)  {
     taskList.push(task)
     listHeader.innerHTML = `${userName}'s Tasks`
     let li = document.createElement("li")
-    li.innerHTML = `${taskList[items]}<button onclick="this.parentNode.remove()" id="done">delete</button></li>`;
+    li.innerHTML = `${taskList[items]}<button onclick="this.parentNode.remove()" id="done">X</button></li>`;
     list.appendChild(li)
     //let deleteTask = document.getElementById("done")
     //deleteTask.addEventListener("click", deleteChild)

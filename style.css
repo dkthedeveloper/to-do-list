@@ -9,13 +9,14 @@ body    {
 main    {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-bottom: 70px;
     background: white;
-    width: 1000px;
+    width: 95%;
     flex-grow: 1;
     flex-shrink: 1;
     height: fit-content;
-    margin: 20px 180px;
+    margin: 2% 5%;
     padding: 20px;
     padding-bottom: 40px;
     border: 1px solid black;
@@ -26,14 +27,24 @@ main    {
 
 
 form    {
-    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   /* flex-grow: 2; */
     margin-bottom: 70px;
     background: rgb(241, 238, 238);
-    width: 600px;
-    margin: 20px auto;
+    width: 60%;
+    margin: 20px 20%;
     padding: 20px;
     border: 1px solid rgb(67, 67, 67);
     box-shadow: 20px 8px 10px rgb(202, 199, 199);
+    flex-shrink: .2;
+}
+
+form button {
+    background-color: rgb(39, 88, 238);
+    color: whitesmoke;
+
 }
 
 
@@ -42,8 +53,39 @@ h1  {
     display: block;
     text-align: center;
 }
+
+#form-inputs  {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    height: 1.5rem;
+    margin: 0 2rem 0 2rem;
+    padding: .2rem 10% .2rem 10%;
+    
+   
+}
+
 input   {
     background-color: rgb(209, 237, 250);
+    
+}
+
+#name {
+    width: 50%;
+    margin-right: .5rem;
+}
+
+#task {
+    width: 90%;
+    margin-right: .5rem;
+}
+
+#submit {
+    margin-right: .5rem;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 
@@ -52,7 +94,7 @@ input   {
     list-style-image: url(./images/arrow-g722be1e34_640.png);
     position: relative;
     margin:auto;
-    width: 400px;
+    width: 30%;
 }
 
 
@@ -67,14 +109,13 @@ li  {
     padding-left: 10px;
     color: rgb(39, 88, 238);
     font-size: 18px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-size: 20px;
+    padding: .5rem .2rem .5rem .5rem;
+    font-size: 1.2rem;
     font-weight: 800;
-    
-  
-    
+    float: left;  
+    width: 100%;
 }
+
 
 li:first-child {
     border-top: none;
@@ -88,15 +129,87 @@ li:first-child {
   li:hover {
     background: rgb(215, 255, 82);
     /*box-shadow: 10px 8px 10px rgb(117, 143, 102);*/
-    font-size: 22px;
+    font-size: 1.3rem;
     text-shadow: 4px 10px 10px rgb(45, 120, 145);
+    cursor: pointer;
+  }
+
+  li button:hover {
+    cursor: pointer;
   }
 
   
 
 #done   {
-    position: absolute;
-    right: 0;   
+    /*position: absolute;
+    right: 0;  */
+    float: right;
+    margin-top: .2rem;
+    background-color: transparent;
+    border: none;
+    color: rgb(238, 66, 39);
+    font-size: 1rem;
+}
+
+#done:hover {
+    font-size: 1.3rem;
+    text-shadow: 4px 10px 10px rgb(45, 120, 145);
+}
+
+@media screen and (max-width: 768px) {
+
+    form  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #form-inputs {
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        height: auto;
+    }
+
+    #name {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: .2rem;
+    }
     
+    #task {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    #submit {
+        margin-right: 0;
+        margin: .3rem 0 .2rem 0;
+    }
+    
+
+
+    form button {
+        width: 50%;
+    }
+
+    #tasklist {
+        width: 60%;
+    }
+    
+}
+
+@media screen and (max-width: 350px) {
+    form button {
+        width: 100%;
+    }
+
+    li {
+        font-size: .8rem;
+    }
 
 }
