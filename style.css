@@ -44,6 +44,7 @@ form    {
 form button {
     background-color: rgb(39, 88, 238);
     color: whitesmoke;
+    border-color: black;
 
 }
 
@@ -199,6 +200,10 @@ li:first-child {
 
     #tasklist {
         width: 60%;
+    }
+
+    li {
+        font-size: .9rem;
     }
     
 }
