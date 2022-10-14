@@ -203,11 +203,11 @@ li:first-child {
     }
 
     li {
-        font-size: .8rem;
+        font-size: .7rem;
     }
 
     li:hover {
-        font-size: .9rem;
+        font-size: .8rem;
     }
 
     #done {
