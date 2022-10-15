@@ -29,8 +29,8 @@ function handleSubmit (event)  {
     if (taskInput.value === "" || nameInput.value === "") {
         alert('This cannot be empty')
         return false;
-     }  else if (taskInput.value.length > 10) {
-        alert('Please limit task to 10 characters');
+     }  else if (taskInput.value.length > 12) {
+        alert('Please limit task to 12 characters');
         return false
      }
     else    {
