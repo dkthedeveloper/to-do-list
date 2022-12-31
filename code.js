@@ -4,22 +4,32 @@ let list = document.getElementById("tasklist");
 let nameInput = document.getElementById("name");
 let taskInput = document.getElementById("task");
 let listHeader = document.getElementById("listhead");
+let modal = document.getElementById("modal");
+let backdrop = document.getElementById("backdrop");
+let modalCloseBtn = document.getElementById("modal-btn");
+let modalText = document.getElementById("modal-text");
 let userName = "";
 let task = "";
 let form = document.getElementById("form");
 let taskList = [];
 let items = 0;
+let modalMessage = 'Cannot submit empty form.'
 
 submitButton.addEventListener("click", handleSubmit);
 clearButton.addEventListener("click", clearForm);
 
+function modalChange(displayValue, message) {
+  modalText.innerHTML = message;
+  modal.style.display = displayValue;
+}
+
 function handleSubmit(event) {
   event.preventDefault();
   if (taskInput.value === "" || nameInput.value === "") {
-    alert("This cannot be empty");
+    modalChange('flex', modalMessage);
     return false;
-  } else if (taskInput.value.length > 12) {
-    alert("Please limit task to 12 characters");
+  } else if (taskInput.value.length > 16) {
+    alert("Please limit task to 16 characters");
     return false;
   } else {
     userName = nameInput.value;
@@ -45,3 +55,5 @@ function clearForm() {
 function deleteChild(e) {
   list.removeChild(list.lastElementChild);
 }
+
+modalCloseBtn.addEventListener("click", () => modalChange("none"));
